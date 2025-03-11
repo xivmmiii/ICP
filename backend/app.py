@@ -1,4 +1,4 @@
-# flask --app home run --debug
+# flask --app app run --debug
 from flask import Flask, render_template, request, jsonify
 from PIL import Image
 from sklearn.cluster import KMeans

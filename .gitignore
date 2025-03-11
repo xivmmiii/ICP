@@ -1,0 +1,47 @@
+# system files
+.DS_Store
+Thumbs.db
+
+# Ignore JetBrains (PyCharm) project files
+.idea/
+
+# Ignore Python cache and virtual environment
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+venv/
+env/
+
+# Ignore Flask logs and uploads
+instance/
+uploads/
+*.log
+
+# Ignore Node.js dependencies (for frontend)
+frontend/node_modules/
+frontend/.next/
+frontend/.parcel-cache/
+frontend/dist/
+
+# Ignore build artifacts
+backend/__pycache__/
+backend/*.pyc
+backend/*.pyo
+backend/*.pyd
+backend/venv/
+backend/env/
+
+# Ignore environment variables
+.env
+backend/.env
+frontend/.env
+
+# Ignore package lock files (optional)
+frontend/package-lock.json
+backend/poetry.lock  # If using Poetry for dependency management
+
+# Ignore coverage and test artifacts
+htmlcov/
+coverage.xml
+pytest_cache/
