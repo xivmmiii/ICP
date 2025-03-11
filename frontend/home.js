@@ -11,7 +11,7 @@ function codeToRun() {
         const formData = new FormData();
         selectedFile = path.files[0];
         formData.append("image", selectedFile);
-        fetch("/upload-image", {
+        fetch("http://127.0.0.1:5000//upload-image", {
             method: "POST",
             body: formData,
         })
@@ -35,7 +35,7 @@ function codeToRun() {
                     if (i == 0) palette.insertBefore(color, palette.firstChild);
                     else palette.appendChild(color);
                     codes.appendChild(colorCode);
-                    color = document.getElementById(id);                    
+                    color = document.getElementById(id);
                     color.style.backgroundColor = colors[i];
                     colorCode.textContent = colors[i];
 
@@ -45,17 +45,17 @@ function codeToRun() {
                         );
                         code = document.getElementById(
                             "code" + event.target.id
-                        );                        
+                        );
                         code.textContent = "Copied!";
                         code.style.color = "white";
                         code.style.backgroundColor = "black";
                         code.style.opacity = "50%";
                         setTimeout(() => {
-                            code.textContent = colors[parseInt((code.id).slice(-1))];
+                            code.textContent =
+                                colors[parseInt(code.id.slice(-1))];
                             code.style.backgroundColor = "white";
                             code.style.color = "black";
                             code.style.opacity = "100%";
-                            
                         }, 1000);
                     });
                 }

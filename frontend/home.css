@@ -12,7 +12,7 @@
     text-shadow: 0px 2px 10px black;
 }
 #content {
-    display: flex;
+    display: flex;    
 }
 .picture {
     width: 300px;
